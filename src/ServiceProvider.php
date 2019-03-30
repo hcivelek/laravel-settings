@@ -19,7 +19,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function boot()
     { 
         $this->registerConfig();  
-        $this->loadMigrationsFrom(__DIR__ . '/../Database/migrations');   
+        $this->loadMigrationsFrom(__DIR__ . '/Database/migrations');   
     }
  
     /**
