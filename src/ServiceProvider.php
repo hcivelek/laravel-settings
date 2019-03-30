@@ -22,17 +22,9 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function boot()
     { 
         $this->registerConfig();  
-        $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');  
-        $this->publishMigrations();     
+        $this->loadMigrationsFrom(__DIR__ . '/../Database/migrations');   
     }
-
-    public function publishMigrations()
-    {
-        $this->publishes([
-            realpath(__DIR__.'/../Database/Migrations') => $this->app->databasePath().'/migrations',
-        ]);
-    }
-
+ 
     /**
      * Register the service provider.
      *
