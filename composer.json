@@ -1,0 +1,36 @@
+{
+    "name": "hasancivelek/laravel-settings",
+    "description": "It provides a settings model that can be used with trait on any model for Laravel project",
+    "keywords": ["hcivelek", "laravel-settings", "settings", "hasan civelek"],
+    "license": "MIT",
+    "homepage": "https://github.com/hcivelek/laravel-settings",
+    "authors": [{
+        "name": "Hasan",
+        "email": "hcivelek@kuzen.net",
+        "role": "Developer"
+    }],
+    "require": {
+        "php": "~7.1",
+        "illuminate/support": "5.5.x|5.6.x|5.7.x|5.8.x"
+    },
+    "autoload": {
+        "psr-4": {
+            "hcivelek\\Settings\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "hcivelek\\Settings\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "hcivelek\\Settings\\ServiceProvider"
+            ],
+            "aliases": {
+                "Categorizable": "hcivelek\\Settings\\Facade"
+            }
+        }
+    }
+}
