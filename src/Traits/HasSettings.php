@@ -7,12 +7,7 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 trait hasSettings
 {
     public function settings(): MorphMany
-    {
-      /*
-        \App::singleton(config('settings.singleton'), function(){
-          return Setting::all()->pluck("value","keyword")->toArray();
-        });   
-*/
+    { 
         return $this->morphMany(
             \hcivelek\Settings\Entities\Setting::class,
             'model'
@@ -91,5 +86,9 @@ trait hasSettings
       return null;
       
     }
+
+    public function valueOfSettingAsArray($keyword){
+      return explode(",",$this->valueOfSetting($keyword));
+    }    
 
 }
