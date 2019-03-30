@@ -1,5 +1,5 @@
 {
-    "name": "hasancivelek/laravel-settings",
+    "name": "hcivelek/laravel-settings",
     "description": "It provides a settings model that can be used with trait on any model for Laravel project",
     "keywords": ["hcivelek", "laravel-settings", "settings", "hasan civelek"],
     "license": "MIT",
