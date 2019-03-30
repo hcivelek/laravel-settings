@@ -29,7 +29,7 @@
                 "hcivelek\\Settings\\ServiceProvider"
             ],
             "aliases": {
-                "Categorizable": "hcivelek\\Settings\\Facade"
+                "Settings": "hcivelek\\Settings\\Facade"
             }
         }
     }
