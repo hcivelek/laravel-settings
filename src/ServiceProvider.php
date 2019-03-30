@@ -2,9 +2,6 @@
 
 namespace hcivelek\Settings;
  
-use Illuminate\Database\Eloquent\Factory;
-use hcivelek\Settings\Entities\Setting;
-
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     /**
@@ -58,6 +55,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function provides()
     {
-        return [];
+        return ['settings'];
     }
 }

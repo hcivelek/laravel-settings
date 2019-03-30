@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "hcivelek\\Settings\\": "src"
+            "hcivelek\\Settings\\": "src/"
         }
     },
     "autoload-dev": {
