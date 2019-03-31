@@ -1,5 +1,9 @@
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
+[![Latest Stable Version](https://poser.pugx.org/hcivelek/laravel-settings/v/stable)](https://packagist.org/packages/hcivelek/laravel-settings)
+[![Total Downloads](https://poser.pugx.org/hcivelek/laravel-settings/downloads)](https://packagist.org/packages/hcivelek/laravel-settings)
+[![License](https://poser.pugx.org/hcivelek/laravel-settings/license)](https://packagist.org/packages/hcivelek/laravel-settings)
+[![Monthly Downloads](https://poser.pugx.org/hcivelek/laravel-settings/d/monthly)](https://packagist.org/packages/hcivelek/laravel-settings)
+[![Daily Downloads](https://poser.pugx.org/hcivelek/laravel-settings/d/daily)](https://packagist.org/packages/hcivelek/laravel-settings)
+
 
 # Laravel Settings
 It provides a settings model that can be used with trait on any model for Laravel project
