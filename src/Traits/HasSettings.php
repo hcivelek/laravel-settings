@@ -19,6 +19,9 @@ trait hasSettings
      *  */     
     public function addSetting($keyword, $value)
     {
+        $keyword = trim($keyword);
+        $value = trim($value);
+
         try {
             $this->settings()->create([
                 "keyword" => $keyword,
@@ -42,17 +45,19 @@ trait hasSettings
         return;
 
       foreach($settings as $keyword=>$value){
-        $this->addSetting($keyword, $value);
+        $this->addSetting(trim($keyword), trim($value));
       }
     }
 
     public function removeSetting($keyword){
-      $this->settings()->where('keyword', $keyword)->delete();
+      $this->settings()->where('keyword', trim($keyword))->delete();
 
       $this->load('settings');
     }
 
     public function removeSettings($keywords){
+      $keyword = trim($keyword);
+
       if(!is_array($keywords))
         return $this->removeSetting($keywords);
       
@@ -78,17 +83,17 @@ trait hasSettings
 
     public function valueOfSetting($keyword){
       //loads all settings first and then use same collection every time.
-      $result =  $this->settings->firstWhere('keyword', $keyword);
+      $result =  $this->settings->firstWhere('keyword', trim($keyword));
       
       if($result)
-        return $result->value;
+        return trim($result->value);
 
       return null;
       
     }
 
     public function valueOfSettingAsArray($keyword){
-      return explode(",",$this->valueOfSetting($keyword));
+      return array_map("trim",explode(",",$this->valueOfSetting($keyword)));
     }    
 
 }
