@@ -7,14 +7,20 @@ It provides a settings model that can be used with trait on any model for Larave
 # Installation
 Via Composer
 
+``` bash
 $ composer require hcivelek/laravel-settings
+``` 
 
 If you want to use different table name instead of **settings**
+
+``` bash
 $ php artisan vendor:publish --provider="hcivelek\Settings\ServiceProvider" 
+``` 
 
 Then you can change config/settings.php configuration file for table name. Then you should run:
+``` bash
 $ php artisan migrate
-
+``` 
 
 # Usage
 This package provides the **hasSettings** trait that can be included any model. After that the functions below can be used:
